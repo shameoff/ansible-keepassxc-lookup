@@ -13,26 +13,27 @@ making it especially useful in environments where a GUI is not available.
 
 ## Installation
 
-Clone the repository and include it in your Ansible configuration under the `lookup_plugins` path, or install as an Ansible Galaxy collection.
-
-### Install KeePassXC
+### KeePassXC 
 
 See [KeePassXC site](https://keepassxc.org/) for details of Installation.  
 In my case installing it via `apt install keepassxc` was enough. I'm sure, other package managers
 also have this package
 
-### As an Ansible Galaxy Collection
+### The plugin itself
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/shameoff/ansible-keepassxc-lookup.git
-   ```
-2. Build and install the collection:
-   ```bash
-   cd ansible-keepassxc-lookup
-   ansible-galaxy collection build
-   ansible-galaxy collection install shameoff-ansible-keepassxc-1.0.0.tar.gz
-   ```
+To be honest, I wouldn't like to post this like an ansible-galaxy collection by several reasons. ~~(first of them is lazyness)~~
+
+So, I suggest you just copy the file `plugins/lookup/keepassxc-cli.py` to your `ansible_plugins` folder. 
+
+If you want to store it near with your ansible-playbooks. Do next:
+
+1. Create/Edit an `ansible.cfg` file and add in defaults section the string `lookup_plugins=./plugins/lookup`
+  ```ini
+  [defaults]
+  lookup_plugins=./plugins/lookup
+  ... # other params
+  ```
+2. Paste the file `plugins/lookup/keepassxc-cli.py` in `./plugins/lookup`
 
 ## Usage
 

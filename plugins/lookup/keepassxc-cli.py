@@ -7,8 +7,8 @@ from ansible.plugins.lookup import LookupBase
 from ansible.utils.display import Display
 
 DOCUMENTATION = """
-    lookup: keepass_cli
-    author: Your Name <your.email@example.com>
+    lookup: keepassxc-cli
+    author: Egor Shamov shameoff16@gmail.com
     version_added: '1.0'
     short_description: Fetch data from a KeePass database using keepassxc-cli with enhanced debugging and newline fix
     description:
