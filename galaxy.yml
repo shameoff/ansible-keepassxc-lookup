@@ -1,6 +1,6 @@
 ---
 namespace: shameoff
-name: keepassxc_cli
+name: keepassxccli
 version: "1.0.0"
 readme: README.md
 authors:
@@ -12,7 +12,7 @@ tags:
   - keepass
   - lookup
   - keepassxc
-  - keepassxc-cli
+  - keepassxccli
   - plugin
   - cli
   - secrets
