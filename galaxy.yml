@@ -1,0 +1,20 @@
+---
+namespace: shameoff
+name: keepassxc_cli
+version: "1.0.0"
+readme: README.md
+authors:
+  - Egor Shamov shameoff16@gmail.com>
+description: >
+  Ansible lookup plugin for fetching data from a KeePass database using keepassxc-cli.
+license: [ MIT ]
+tags:
+  - keepass
+  - lookup
+  - keepassxc
+  - keepassxc-cli
+  - plugin
+  - cli
+  - secrets
+dependencies: {}
+repository: "https://github.com/shameoff/ansible-keepassxc-lookup"
