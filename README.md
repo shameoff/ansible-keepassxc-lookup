@@ -22,7 +22,7 @@ also have this package
 ### Install plugin via Ansible Galaxy
 
 ```bash
-ansible-galaxy collection install viczem.keepass
+ansible-galaxy collection install shameoff.keepassxccli
 ```
 
 ### Install plugin manually 
