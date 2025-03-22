@@ -25,8 +25,8 @@ DOCUMENTATION = """
     notes:
       - Requires keepassxc-cli to be installed and available in the system PATH.
     examples:
-      - "{{ lookup('keepassxccli', 'MyEntry', 'username') }}"
-      - "{{ lookup('keepassxccli', 'MyEntry', 'password') }}"
+      - "{{ lookup('shameoff.keepassxccli.keepassxccli', 'MyEntry', 'username') }}"
+      - "{{ lookup('shameoff.keepassxccli.keepassxccli', 'MyEntry', 'password') }}"
       - "{{ lookup('keepassxccli', 'MyEntry', 'custom_properties', 'my_prop_key') }}"
 """
 

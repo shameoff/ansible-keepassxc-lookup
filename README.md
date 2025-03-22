@@ -57,12 +57,15 @@ In your playbook, you can use the lookup plugin like this:
 ```yaml
 - name: Retrieve password from KeePass
   debug:
-    msg: "{{ lookup('keepassxccli', 'A_name_of_your_credentials_entity', 'password') }}"
+    msg: "{{ lookup('shameoff.keepassxccli.keepassxccli', 'A_name_of_your_credentials_entity', 'password') }}"
 
 - name: Retrieve a custom property from KeePass
   debug:
-    msg: "{{ lookup('keepassxccli', 'Entry (can contain spaces)', 'custom_properties', 'my_prop_key') }}"
+    msg: "{{ lookup('shameoff.keepassxccli.keepassxccli', 'Entry (can contain spaces)', 'custom_properties', 'my_prop_key') }}"
 ```
+
+> [!TIP]
+> Pay attention, that if you install plugin manually in your `lookup_plugins` folder, you should call it like `keepassxccli` instead of `shameoff.keepassxccli.keepassxccli`
 
 Ensure that the required variables are defined, for example in your inventory or playbook:
 
