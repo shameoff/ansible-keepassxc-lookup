@@ -57,8 +57,8 @@ class LookupModule(LookupBase):
 
         # Get key file (if specified)
         var_key = self._var(variables_.get("keepassxc_key_file", ""))
-        if not var_key and "ANSIBLE_KEEPASS_KEY_FILE" in os.environ:
-            var_key = os.environ.get("ANSIBLE_KEEPASS_KEY_FILE")
+        if not var_key and "ANSIBLE_KEEPASSXC_KEY_FILE" in os.environ:
+            var_key = os.environ.get("ANSIBLE_KEEPASSXC_KEY_FILE")
         if var_key:
             var_key = os.path.realpath(os.path.expanduser(os.path.expandvars(var_key)))
             if not os.path.isfile(var_key):
